@@ -22,12 +22,15 @@
     <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
-
-
- <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- Data Table -->
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+    <script src="js/datatables-simple-demo.js"></script>
 </head>
 
 <body>
@@ -48,12 +51,12 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#!">Settings</a></li>
-                    <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                    <li><a class="dropdown-item" href="#!"><i class="fa-solid fa-gears"></i> Settings</a></li>
+                    <li><a class="dropdown-item" href="#!"><i class="fa-solid fa-chart-line"></i> Activity Log</a></li>
                     <li>
                         <hr class="dropdown-divider" />
                     </li>
-                    <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    <li><a class="dropdown-item" href="#!"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
                 </ul>
             </li>
         </ul>
@@ -119,10 +122,18 @@
                         </a>
 
                         <div class="sb-sidenav-menu-heading">Dengan Database</div>
-                        <a class="nav-link" href="charts.html">
-                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                            Charts
-                        </a>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                                Lokasi
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="<?= base_url('Lokasi/inputLokasi') ?>"><i class="fa-solid fa-location-pin-lock"></i> Input Lokasi</a>
+                                    <a class="nav-link" href="<?= base_url('Lokasi/index') ?>"><i class="fa-solid fa-database"></i> Data Lokasi</a>
+                                    <a class="nav-link" href="<?= base_url('Lokasi/pemetaanLokasi') ?>"><i class="fa-solid fa-layer-group"></i> Pemetaan Lokasi</a>
+                                </nav>
+                            </div>
 
                         <a class="nav-link" href="tables.html">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
