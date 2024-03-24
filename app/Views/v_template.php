@@ -29,8 +29,8 @@
 
     <!-- Data Table -->
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
-    <script src="js/datatables-simple-demo.js"></script>
+    <script src="<?= base_url('js/simple.js') ?>" crossorigin="anonymous"></script>
+    <script src="<?= base_url('js/tables.js') ?>"></script>
 </head>
 
 <body>
