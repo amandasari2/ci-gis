@@ -47,8 +47,8 @@
             </div>
             <br>
 
-            <a href="<?= base_url('Lokasi/index') ?>" class="btn btn-danger">Edit</a>
-            <a href="" class="btn btn-success">Kembali</a>
+            <button type="submit" class="btn btn-primary">Edit</button>
+            <a href="<?= base_url('Lokasi/index') ?>" class="btn btn-success">Kembali</a>
             <?php echo form_close() ?>
         </div>
     </div>
