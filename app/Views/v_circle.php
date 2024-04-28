@@ -81,7 +81,7 @@
 	L.circle([2.994816858040706, 99.63991347616101], {
 			radius: 200,
 			color: 'green',
-			fillcalor: 'green',
+			fillColor: 'green',
 			fillOpacity: 0.5
 		})
 		.bindPopup("Informasi")
@@ -90,14 +90,14 @@
 	L.circle([3.0047315520221427, 99.61440983167432], {
 		radius: 300,
 		color: 'yellow',
-		fillcalor: 'yellow',
+		fillColor: 'yellow',
 		fillOpacity: 0.5
 	}).addTo(map);
 
 	L.circle([2.9651738155386624, 99.62876096042397], {
 		radius: 100,
 		color: 'red',
-		fillcalor: 'red',
+		fillColor: 'red',
 		fillOpacity: 0.5
 	}).addTo(map);
 </script>
